@@ -6,7 +6,7 @@ on:
       version:
         description: 'Addon Version'
         required: true
-        default: '0.1.0'
+        default: '1.2.0'
 
 env:
   # TODO: Change variable to your image's name.
