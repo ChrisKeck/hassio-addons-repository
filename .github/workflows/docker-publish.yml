@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Addon Version'     
+        description: 'Addon Version'
         required: true
         default: '0.1.0'
 
@@ -42,13 +42,13 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=cyberdns/${{ env.IMAGE_NAME }}_${{ matrix.arch }}
+          IMAGE_ID=chriskec/${{ env.IMAGE_NAME }}_${{ matrix.arch }}
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          
+
           VERSION=${{ github.event.inputs.version }}
-          
+
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
 
